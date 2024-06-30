@@ -8,6 +8,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <script
+      src="https://kit.fontawesome.com/5f3109262e.js"
+      crossorigin="anonymous"
+    ></script>
     <title>To Do List</title>
   </head>
   <body class="bg-[#fef2f2]">
@@ -72,31 +76,114 @@
           id="taskList"
           class="w-5/6 divide-y-4 divide-opacity-65 divide-rose-600 flex flex-col gap-5 font-medium text-xl"
         >
-          <li class="flex gap-4 py-4"><input type="checkbox" />Buy shoes</li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Buy tickets for cinema
-          </li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Go to grocerry store
-          </li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Call cable company
-          </li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Review lessons for collage
-          </li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Call simon</li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Buy flowers</li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Go to gym</li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Skin care</li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Meditation</li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Get a doctor appointment
-          </li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Read a book</li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Meeting with team
-          </li>
+          <div class="flex justify-between items-center">
+            <li class="flex gap-4 py-4"><input type="checkbox" />Buy shoes</li>
+            <div class="flex gap-6 text-2xl">
+                <i class="text-red-800  cursor-pointer hover:text-red-500 hover:duration-700 fa-regular fa-trash-can"></i>
+                <i class="text-blue-900 cursor-pointer hover:text-blue-500 hover:duration-700  fa-regular fa-pen-to-square"></i>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <li class="flex gap-4 py-4">
+              <input type="checkbox" />Buy tickets for cinema
+            </li>
+
+            <div class="flex gap-6 text-2xl">
+              <i class="text-red-800  cursor-pointer hover:text-red-500 hover:duration-700 fa-regular fa-trash-can"></i>
+              <i class="text-blue-900 cursor-pointer hover:text-blue-500 hover:duration-700 fa-regular fa-pen-to-square"></i>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <li class="flex gap-4 py-4">
+              <input type="checkbox" />Go to grocerry store
+            </li>
+            <div class="flex gap-6 text-2xl">
+              <i class="text-red-800  cursor-pointer hover:text-red-500 hover:duration-700 fa-regular fa-trash-can"></i>
+              <i class="text-blue-900 cursor-pointer hover:text-blue-500 hover:duration-700 fa-regular fa-pen-to-square"></i>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <li class="flex gap-4 py-4">
+              <input type="checkbox" />Call cable company
+            </li>
+            <div class="flex gap-6 text-2xl">
+              <i class="text-red-800  cursor-pointer hover:text-red-500 hover:duration-700 fa-regular fa-trash-can"></i>
+              <i class="text-blue-900 cursor-pointer hover:text-blue-500 hover:duration-700 fa-regular fa-pen-to-square"></i>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <li class="flex gap-4 py-4">
+              <input type="checkbox" />Review lessons for collage
+            </li>
+            <div class="flex gap-6 text-2xl">
+              <i class="text-red-800  cursor-pointer hover:text-red-500 hover:duration-700 fa-regular fa-trash-can"></i>
+              <i class="text-blue-900 cursor-pointer hover:text-blue-500 hover:duration-700 fa-regular fa-pen-to-square"></i>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <li class="flex gap-4 py-4"><input type="checkbox" />Call simon</li>
+            <div class="flex gap-6 text-2xl">
+              <i class="text-red-800  cursor-pointer hover:text-red-500 hover:duration-700 fa-regular fa-trash-can"></i>
+              <i class="text-blue-900 cursor-pointer hover:text-blue-500 hover:duration-700 fa-regular fa-pen-to-square"></i>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <li class="flex gap-4 py-4">
+              <input type="checkbox" />Buy flowers
+            </li>
+            <div class="flex gap-6 text-2xl">
+              <i class="text-red-800  cursor-pointer hover:text-red-500 hover:duration-700 fa-regular fa-trash-can"></i>
+              <i class="text-blue-900 cursor-pointer hover:text-blue-500 hover:duration-700 fa-regular fa-pen-to-square"></i>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <li class="flex gap-4 py-4"><input type="checkbox" />Go to gym</li>
+            <div class="flex gap-6 text-2xl">
+              <i class="text-red-800  cursor-pointer hover:text-red-500 hover:duration-700 fa-regular fa-trash-can"></i>
+              <i class="text-blue-900 cursor-pointer hover:text-blue-500 hover:duration-700 fa-regular fa-pen-to-square"></i>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <li class="flex gap-4 py-4"><input type="checkbox" />Skin care</li>
+            <div class="flex gap-6 text-2xl">
+              <i class="text-red-800  cursor-pointer hover:text-red-500 hover:duration-700 fa-regular fa-trash-can"></i>
+              <i class="text-blue-900 cursor-pointer hover:text-blue-500 hover:duration-700 fa-regular fa-pen-to-square"></i>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <li class="flex gap-4 py-4"><input type="checkbox" />Meditation</li>
+            <div class="flex gap-6 text-2xl">
+              <i class="text-red-800  cursor-pointer hover:text-red-500 hover:duration-700 fa-regular fa-trash-can"></i>
+              <i class="text-blue-900 cursor-pointer hover:text-blue-500 hover:duration-700 fa-regular fa-pen-to-square"></i>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <li class="flex gap-4 py-4">
+              <input type="checkbox" />Get a doctor appointment
+            </li>
+            <div class="flex gap-6 text-2xl">
+              <i class="text-red-800  cursor-pointer hover:text-red-500 hover:duration-700 fa-regular fa-trash-can"></i>
+              <i class="text-blue-900 cursor-pointer hover:text-blue-500 hover:duration-700 fa-regular fa-pen-to-square"></i>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <li class="flex gap-4 py-4">
+              <input type="checkbox" />Read a book
+            </li>
+            <div class="flex gap-6 text-2xl">
+              <i class="text-red-800  cursor-pointer hover:text-red-500 hover:duration-700 fa-regular fa-trash-can"></i>
+              <i class="text-blue-900 cursor-pointer hover:text-blue-500 hover:duration-700 fa-regular fa-pen-to-square"></i>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <li class="flex gap-4 py-4">
+              <input type="checkbox" />Meeting with team
+            </li>
+            <div class="flex gap-6 text-2xl">
+              <i class="text-red-800  cursor-pointer hover:text-red-500 hover:duration-700 fa-regular fa-trash-can"></i>
+              <i class="text-blue-900 cursor-pointer hover:text-blue-500 hover:duration-700 fa-regular fa-pen-to-square"></i>
+            </div>
+          </div>
         </ul>
       </div>
       <!--end of front side of the card -->
