@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.front,
+.back {
+  backface-visibility: hidden;
+  transition: all 1.2s ease;
+}
+
+.front {
+  overflow: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+.-rotate-y-180 {
+  transform: rotateY(-180deg);
+}
