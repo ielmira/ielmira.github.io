@@ -9,6 +9,7 @@ toggleBtn.addEventListener("change", () => {
   console.log("ok");
 });
 
+// handle task addition
 const taskInput = document.getElementById("taskInput");
 const taskList = document.getElementById("taskList");
 
@@ -19,19 +20,21 @@ function addTask () {
         li.textContent = taskText;
         taskList.appendChild(li);
         taskInput.value = '';
+        li.addEventListener('click' , completeTask);
     }
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'delete';
     deleteBtn.addEventListener('click' , deleteTask);
     li.appendChild(deleteBtn);
 }
-
+// handle task completion
 function completeTask (event) {
     const task = event.target;
     task.classList.toggle('completed')
 }
-li.addEventListener('click' , completeTask);
 
+
+// handle task deletion
 function deleteTask (event){
     const task = event.target.parentElement;
     taskList.removeChild(task);
