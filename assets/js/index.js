@@ -53,9 +53,16 @@ toggleBtn.addEventListener("change", () => {
 
 const taskInput = document.getElementById("taskInput");
 const taskList = document.getElementById("taskList");
+const backSide = document.getElementById("backSide");
 
 function addTask() {
   const taskText = taskInput.value.trim();
+
+  if (taskText === "") {
+    alert("poresh kon");
+    return;
+  }
+
   const div = document.createElement("div");
   div.classList.add("flex", "justify-between", "items-center");
 
@@ -67,13 +74,20 @@ function addTask() {
   input.setAttribute("type", "checkbox");
   li.appendChild(input);
 
-  li.insertAdjacentHTML("beforeend", taskText);
+  input.addEventListener("change", function () {
+    const parent = this.parentElement.parentElement;
+    parent.remove();
+    backSide.appendChild(parent);
+    console.log("added");
+  });
 
-  const divI = document.createElement("div");
-  divI.classList.add("flex", "gap-6", "text-2xl");
-  div.appendChild(divI);
+  li.insertAdjacentHTML("beforeend", `<p>${taskText}</p>`);
 
-  const trash = document.createElement("trash");
+  const divIcon = document.createElement("div");
+  divIcon.classList.add("flex", "gap-6", "text-2xl");
+  div.appendChild(divIcon);
+
+  const trash = document.createElement("i");
   trash.classList.add(
     "text-red-800",
     "cursor-pointer",
@@ -82,9 +96,13 @@ function addTask() {
     "fa-regular",
     "fa-trash-can"
   );
-  divI.appendChild(trash);
+  divIcon.appendChild(trash);
 
-  const edit = document.createElement("edit");
+  trash.addEventListener("click", function () {
+    this.parentElement.parentElement.remove();
+  });
+
+  const edit = document.createElement("i");
   edit.classList.add(
     "text-blue-900",
     "cursor-pointer",
@@ -93,8 +111,21 @@ function addTask() {
     "fa-regular",
     "fa-pen-to-square"
   );
-  divI.appendChild(edit);
+
+  edit.addEventListener("click", function () {
+    console.log("hoy");
+    const iconDiv = this.parentElement;
+    const val = iconDiv.previousElementSibling.querySelector("p").textContent;
+    taskInput.value = val;
+
+    iconDiv.parentElement.remove();
+  });
+
+  divIcon.appendChild(edit);
   taskList.appendChild(div);
   taskInput.value = "";
-  console.log("done");
 }
+
+// const buttonDelete = document.getElementById("trashBtn", () => {
+//   list.removeChild(li);
+// });
