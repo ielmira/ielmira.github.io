@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/output.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <link rel="stylesheet" href="./assets/css/animate.min.css" />
+    <script src="./assets/js/icon.js" crossorigin="anonymous"></script>
     <title>To Do List</title>
   </head>
-  <body>
+  <body class="bg-[#fef2f2]">
     <!-- header -->
 
     <h1
@@ -29,7 +27,7 @@
       >
         <input type="checkbox" id="toggleBtn" class="peer h-0 w-0" />
         <span
-          class="cursor-pointer left-0 h-10 w-24 absolute rounded-full border-[#6b7280] border bg-[#94a3b8] before:absolute  before:h-8 before:w-8 before:bottom-1 before:left-1 before:rounded-full before:bg-white before:duration-300 peer-checked:before:translate-x-14 peer-checked:bg-[#22c55e]"
+          class="cursor-pointer left-0 h-10 w-24 absolute rounded-full border-[#6b7280] border bg-[#94a3b8] before:absolute before:h-8 before:w-8 before:bottom-1 before:left-1 before:rounded-full before:bg-white before:duration-300 peer-checked:before:translate-x-14 peer-checked:bg-[#22c55e]"
         ></span>
       </label>
       <p>Thins You Have <span class="text-red-500 font-bold">NOT</span> Done</p>
@@ -42,19 +40,27 @@
 
       <!-- front side of the card -->
 
-      <div class="mt-5 flex flex-col items-center shadow-2xl front absolute w-[85%]">
-        <h2 class="font-bold text-[30px] mb-5 mt-5 text-[#be185d]">Thins You Have <span class="text-red-500 font-bold">NOT</span> Done</h2>
+      <div
+        class="mt-5 flex flex-col items-center shadow-2xl front absolute w-[85%] bg-[#fdf4ff]"
+      >
+        <h2 class="font-bold text-[30px] mb-5 mt-5 text-[#be185d]">
+          Thins You Have <span class="text-red-500 font-bold">NOT</span> Done
+        </h2>
         <!-- add task -->
 
-        <form action="" class="mt-5 w-5/6">
+        <form action="" class="mt-5 w-5/6 mb-5 ">
           <div class="flex justify-between gap-4">
             <input
               type="text"
+              id="taskInput"
               class="p-4 w-full border border-[#cbd5e1] rounded-xl focus:outline-none"
               placeholder="Add New Task"
             />
             <button
               type="button"
+              id="myBtn"
+              ;
+              onclick="addTask()"
               class="bg-[#ef4444] p-4 rounded-xl hover:bg-[#b91c1c] text-white font-serif hover:transition hover:duration-500"
             >
               Add
@@ -63,79 +69,43 @@
         </form>
         <!--end of add task -->
         <ul
-          class="w-5/6 divide-y-4 divide-opacity-65 divide-rose-600 flex flex-col gap-5 font-medium text-xl "
-        >
-          <li class="flex gap-4 py-4"><input type="checkbox" />Buy shoes</li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Buy tickets for cinema
-          </li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Go to grocerry store
-          </li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Call cable company
-          </li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Review lessons for collage
-          </li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Call simon</li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Buy flowers</li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Go to gym</li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Skin care</li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Meditation</li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Get a doctor appointment
-          </li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Read a book</li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Meeting with team
-          </li>
-        </ul>
+          id="taskList"
+          class="w-5/6 divide-y-4 divide-opacity-65 divide-rose-600 flex flex-col gap-5 font-medium text-xl"
+        ></ul>
       </div>
       <!--end of front side of the card -->
 
       <!-- back side of the card -->
 
       <div
-        class="mt-5 flex flex-col items-center shadow-2xl rotate-y-180 back absolute w-[85%]"
+        class="mt-5 flex flex-col items-center shadow-2xl rotate-y-180 back absolute w-[85%] bg-[#fdf4ff]"
       >
         <h2 class="font-bold text-[30px] mb-5 mt-5 text-[#be185d]">
-            Things You Have Done
+          Things You Have Done
         </h2>
         <ul
+          id="backSide"
           class="w-5/6 divide-y-4 divide-opacity-65 divide-rose-600 flex flex-col gap-5 font-medium text-xl"
-        >
-          <li class="flex gap-4 py-4"><input type="checkbox" />Go to gym</li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Skin care</li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Meditation</li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Get a doctor appointment
-          </li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Read a book</li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Meeting with team
-          </li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Buy shoes</li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Buy tickets for cinema
-          </li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Go to grocerry store
-          </li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Call cable company
-          </li>
-          <li class="flex gap-4 py-4">
-            <input type="checkbox" />Review lessons for collage
-          </li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Call simon</li>
-          <li class="flex gap-4 py-4"><input type="checkbox" />Buy flowers</li>
-        </ul>
+        ></ul>
       </div>
       <!--end of back side of the card -->
 
       <!-- end of to do list -->
     </div>
+
+    <template id="new-input">
+      <div class="flex justify-between items-center">
+        <li class="flex gap-4 py-4 li"><input type="checkbox" />%text%</li>
+        <div class="flex gap-6 text-2xl">
+          <i
+            class="text-red-800 cursor-pointer hover:text-red-500 hover:duration-700 fa-regular fa-trash-can"
+          ></i>
+          <i
+            class="text-blue-900 cursor-pointer hover:text-blue-500 hover:duration-700 fa-regular fa-pen-to-square"
+          ></i>
+        </div>
+      </div>
+    </template>
     <!--end of card -->
     <script src="./assets/js/index.js"></script>
   </body>
