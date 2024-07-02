@@ -76,8 +76,10 @@ function addTask() {
 
   input.addEventListener("change", function () {
     const parent = this.parentElement.parentElement;
+    const clone = parent.cloneNode(true);
     parent.remove();
-    backSide.appendChild(parent);
+    clone.querySelector("li p").classList.add("line-through");
+    backSide.appendChild(clone);
     console.log("added");
   });
 
