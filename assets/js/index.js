@@ -9,47 +9,6 @@ toggleBtn.addEventListener("change", () => {
   console.log("ok");
 });
 
-// handle task addition
-
-// const taskInput = document.getElementById("taskInput");
-// const taskList = document.getElementById("taskList");
-
-// function addTask() {
-//   const taskText = taskInput.value.trim();
-//   if (taskText === "") {
-//     alert("input not be empty");
-//     return;
-//   }
-
-// const newInputHtml = document.getElementById("new-input").innerHTML;
-
-// taskList.insertAdjacentHTML(
-//   "beforeend",
-//   newInputHtml.replace("%text%", taskText)
-// );
-
-// const li = document.createElement("li");
-// li.textContent = taskText;
-
-// taskInput.value = "";
-// li.addEventListener("click", completeTask);
-
-// const deleteBtn = document.createElement("button");
-// deleteBtn.textContent = "delete";
-// deleteBtn.addEventListener("click", deleteTask);
-// li.appendChild(deleteBtn);
-// }
-// handle task completion
-// function completeTask (event) {
-//     const task = event.target;
-//     task.classList.toggle('completed')
-// }
-
-// // handle task deletion
-// function deleteTask (event){
-//     const task = event.target.parentElement;
-//     taskList.removeChild(task);
-// }
 
 const taskInput = document.getElementById("taskInput");
 const taskList = document.getElementById("taskList");
@@ -127,7 +86,3 @@ function addTask() {
   taskList.appendChild(div);
   taskInput.value = "";
 }
-
-// const buttonDelete = document.getElementById("trashBtn", () => {
-//   list.removeChild(li);
-// });
